@@ -65,13 +65,16 @@
             <button type="button" onclick="myfun()" style="margin:15px">妈妈找我算账啦</button>
         </div>
 
-
     </body>
     <script>
+        const HEAD_COL = 0;
         const MULT_COL = 1;
         const INPU_COL = 2;
         const OUTP_COL = 3;
         var prec = 2;
+        function get_row_header(row, table) {
+            return  table.rows[row].cells[HEAD_COL].innerHTML;
+        }
         function update_prec() {
             prec = document.getElementById('prec').getElementsByTagName('input')[0].value;
         }
@@ -87,6 +90,7 @@
 
             for(var i = 1; i < atable.rows.length -1; i++) {
                 var prod = parseFloat(get_table_input(i, MULT_COL, atable)*get_table_input(i, INPU_COL, atable)).toFixed(prec);
+                if(prod < 0) alert("在'" + get_row_header(i, atable) + "' 输入了负数吧大傻瓜");
                 set_table_cell(i, OUTP_COL, atable, prod);
                 products.push(prod);
             }
