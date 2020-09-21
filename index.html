@@ -15,66 +15,110 @@
             <table id='atable'>
                 <tr>
                     <th> 项目 </th>
+                    <th> 小项目 </th>
                     <th> 系数 </th>
                     <th> 数量 </th>
+                    <th> 项目数量和 </th>
                     <th> 乘积 </th>
+                    <th> 项目乘积和 </th>
                 </tr>
                 <tr>
-                    <th> 动态心电图 </th>
+                    <th id='bigh' rowspan='2'> 动态心电图 </th>
+                    <th id='smah'> 门诊 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 max=3 style="width:100%;height:100%" value=0.13></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum' rowspan='2'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro' rowspan='2'>  </td>
                 </tr>
                 <tr>
-                    <th> 脑电图 </th>
+                    <th id='smah'> 住院 </th>
+                    <td id='mult'><input type="number" step="0.01" min=0 max=3 style="width:100%;height:100%" value=0.13></td>
+                    <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
+                    <td id='prod'>  </td>
+                </tr>
+                <tr>
+                    <th id='bigh' colspan='2'> 脑电图 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.13></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro'>  </td>
                 </tr>
                 <tr>
-                    <th> 动态血压 </th>
+                    <th id='bigh' colspan='2'> 动态血压 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.12></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro'>  </td>
                 </tr>
                 <tr>
-                    <th> 运动平板 </th>
+                    <th id='bigh' colspan='2'> 运动平板 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.12></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro'>  </td>
                 </tr>
                 <tr>
-                    <th> 频谱心电图 </th>
+                    <th id='bigh' rowspan='3'> 频谱心电图 </th>
+                    <th id='smah'> 药物试验 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.11></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum' rowspan='3'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro' rowspan='3'>  </td>
                 </tr>
                 <tr>
-                    <th> 常规心电图 </th>
+                    <th id='smah'> 心率变异 </th>
+                    <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.11></td>
+                    <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
+                    <td id='prod'>  </td>
+                </tr>
+                <tr>
+                    <th id='smah'> 十八导 </th>
+                    <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.11></td>
+                    <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
+                    <td id='prod'>  </td>
+                </tr>
+                <tr>
+                    <th id='bigh' colspan='2'> 常规心电图 </th>
                     <td id='mult'><input type="number" step="0.01" min=0 style="width:100%;height:100%" value=0.10></td>
                     <td id='inpu'><input type="number" min=0 style="width:100%;height:100%" value=0></td>
-                    <td id='outp'>  </td>
+                    <td id='ssum'>  </td>
+                    <td id='prod'>  </td>
+                    <td id='spro'>  </td>
                 </tr>
                 <tr>
-                    <th> 总和 </th>
+                    <th id='bigh' colspan='2'> 总和 </th>
                     <td></td>
                     <td></td>
-                    <td id='total'> </td>
+                    <td id='total_inp'> </td>
+                    <td></td>
+                    <td id='total_sum'> </td>
                 </tr>
             </table>
             <button type="button" onclick="myfun()" style="margin:15px">妈妈找我算账啦</button>
         </div>
 
+        <p id='demo0'>header </p>
+        <p id='demo1'>row </p>
+        <p id='demo2'>i,j </p>
+        <p id='demo3'>inpu </p>
+        <p id='demo4'>ssum </p>
+        <p id='demo5'>ssum_j </p>
+        <p id='demo6'>prod </p>
+        <p id='demo7'>prod_j </p>
+        <p id='demo8'>spro </p>
+        <p id='demo9'>spro_j </p>
+        <p id='demo10'>Setting </p>
+        <p id='demo11'>total_sum = </p>
     </body>
     <script>
-        const HEAD_COL = 0;
-        const MULT_COL = 1;
-        const INPU_COL = 2;
-        const OUTP_COL = 3;
+        const BIG_HEAD_COL = 0;
         var prec = 2;
-        function get_row_header(row, table) {
-            return  table.rows[row].cells[HEAD_COL].innerHTML;
-        }
+        function get_col(col, row, table) { return table.rows[row].cells.length + col; }
         function update_prec() {
             prec = document.getElementById('prec').getElementsByTagName('input')[0].value;
         }
@@ -84,19 +128,72 @@
         function set_table_cell(row, col, table, value) {
             return table.rows[row].cells[col].innerHTML = value;
         }
+        function get_bigh_rowspans(table) {
+            bigh_rows = []
+            for(var i = 1; i < table.rows.length -1; i++) {
+                for(var j = 0; j < table.rows[i].cells.length; j++) {
+                    var rowspan = table.rows[i].cells[j].getAttributeNode('rowspan');
+                    var id = table.rows[i].cells[j].getAttributeNode('id');
+                    if(!id || id.value != 'bigh') continue;
+                    if(rowspan) {
+                        bigh_rows.push(parseInt(rowspan.value));
+                    }
+                    else {
+                        bigh_rows.push(1);
+                    }
+                }
+            }
+            return bigh_rows;
+        }
         function myfun() {
             var atable = document.getElementById('atable');
-            var products = [];
+            var bigh_rows = get_bigh_rowspans(atable);
+            var total_inp = 0;
+            var total_sum = 0.;
 
-            for(var i = 1; i < atable.rows.length -1; i++) {
-                var prod = parseFloat(get_table_input(i, MULT_COL, atable)*get_table_input(i, INPU_COL, atable)).toFixed(prec);
-                if(prod < 0) alert("在'" + get_row_header(i, atable) + "' 输入了负数吧大傻瓜");
-                set_table_cell(i, OUTP_COL, atable, prod);
-                products.push(prod);
-            }
-            
-            total_sum = products.reduce((next, now) => parseFloat(next) + parseFloat(now));
-            document.getElementById('total').innerHTML = parseFloat(total_sum).toFixed(prec);
+            var row = 1;
+            for(header of bigh_rows) {
+                var ssum_j;
+                var ssum = 0;
+                var spro_j;
+                var spro = 0.;
+                for(var i = row; i < row+header; ++i) {
+                    var prod_j;
+                    var prod = 1.;
+                    var smah = atable.rows[i].cells[BIG_HEAD_COL].innerHTML;
+                    for(var j = 1; j < atable.rows[i].cells.length; ++j) {
+                        id = atable.rows[i].cells[j].getAttributeNode('id');
+                        if(!id) continue; // TODO use switch ?
+                        if (id.value == 'smah') {
+                            smah = atable.rows[i].cells[j].innerHTML;
+                        } else if(id.value == 'mult') {
+                            prod *= parseFloat(get_table_input(i, j, atable));
+                        } else if(id.value == 'inpu') {
+                            ssum += parseInt(get_table_input(i, j, atable));
+                            prod *= parseFloat(get_table_input(i, j, atable));
+                        } else if(id.value == 'ssum') {
+                            ssum_j = [i, j];
+                        } else if(id.value == 'prod') {
+                            prod_j = j;
+                        } else if(id.value == 'spro') {
+                            spro_j = [i, j];
+                        }
+                    }
+                    if(prod < 0) alert("在'" + smah + "' 输入了负数吧大傻瓜");
+                    set_table_cell(i, prod_j, atable, prod.toFixed(prec));
+                    spro += prod;
+                    document.getElementById('demo8').innerHTML += spro +' ';
+                }
+                set_table_cell(ssum_j[0], ssum_j[1], atable, ssum);
+                set_table_cell(spro_j[0], spro_j[1], atable, spro.toFixed(prec));
+                total_inp += ssum;
+                total_sum += spro;
+                document.getElementById('demo11').innerHTML += total_sum +' ';
+                row += header;
+            } 
+
+            document.getElementById('total_inp').innerHTML = parseInt(total_inp);
+            document.getElementById('total_sum').innerHTML = parseFloat(total_sum).toFixed(prec);
         }
     </script>
 </html>
